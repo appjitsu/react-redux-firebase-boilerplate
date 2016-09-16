@@ -5,8 +5,8 @@
   "main": "index.js",
   "repository": "git@github.com:btomashvili/react-redux-firebase-boilerplate.git",
   "scripts": {
-    "dev": "webpack-dev-server --config ./webpack/webpack-dev.config.js --watch --colors",
-    "build": "rm -rf dist && webpack --config ./webpack/webpack-prod.config.js --colors",
+    "dev": "webpack-dev-server --config ./webpack/webpack-dev.config.js --watch --colors --progress",
+    "build": "rimraf dist && webpack --config ./webpack/webpack-prod.config.js --colors --progress",
     "start": "PORT=8080 pm2 start ./www.js",
     "test": "eslint src && mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
     "test:watch": "npm run test -- --watch",
